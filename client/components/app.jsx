@@ -1,6 +1,7 @@
 import React from 'react';
 import GradeTableHeader from './header';
-import GradeTable from './gradetable';
+import GradeTable from './grade-table';
+import GradeForm from './grade-form';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => this.setState({ grades: this.state.grades.concat(data) }))
-      .catch(error => console.error('Error', error));
+      .catch(error => console.error(error));
   }
 
   getAverageGrade() {
@@ -41,9 +42,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container d-flex flex-wrap'>
         <GradeTableHeader averageGrade={this.getAverageGrade()} />
-        <GradeTable grades={this.state.grades} />
+        <div className='d-flex w-100'>
+          <GradeTable grades={this.state.grades} />
+          <GradeForm />
+        </div>
       </div>
     );
   }
