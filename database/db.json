@@ -23,6 +23,18 @@
       "course": "",
       "grade": "",
       "id": 33
+    },
+    {
+      "name": "Joe Exotic",
+      "course": "Loyalty",
+      "grade": "17",
+      "id": 34
+    },
+    {
+      "name": "Hanzo Hattori",
+      "course": "Ninjutsu",
+      "grade": "100",
+      "id": 35
     }
   ]
 }

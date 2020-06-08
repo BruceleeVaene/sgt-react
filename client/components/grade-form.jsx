@@ -8,12 +8,12 @@ class GradeForm extends React.Component {
       course: '',
       grade: ''
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.reset = this.reset.bind(this);
   }
 
-  handleClick(event) {
+  handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });
   }
 
@@ -24,7 +24,6 @@ class GradeForm extends React.Component {
       course: this.state.course,
       grade: this.state.grade
     });
-    this.reset();
   }
 
   reset() {
@@ -46,7 +45,7 @@ class GradeForm extends React.Component {
             type='text'
             placeholder='Name'
             value={this.state.name}
-            onClick={this.handleClick}
+            onChange={this.handleChange}
           />
         </label>
 
@@ -58,7 +57,7 @@ class GradeForm extends React.Component {
             type='text'
             placeholder='Course'
             value={this.state.course}
-            onClick={this.handleClick}
+            onChange={this.handleChange}
           />
         </label>
 
@@ -70,7 +69,7 @@ class GradeForm extends React.Component {
             type='number'
             placeholder='Grade'
             value={this.state.grade}
-            onClick={this.handleClick}
+            onChange={this.handleChange}
           />
         </label>
 

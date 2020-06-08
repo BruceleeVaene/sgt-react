@@ -43,11 +43,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='container d-flex flex-wrap'>
+      <div className='container'>
         <GradeTableHeader averageGrade={this.getAverageGrade()} />
         <div className='d-flex w-100'>
           <GradeTable grades={this.state.grades} />
-          <GradeForm addGrade={this.postNewGrade}/>
+          <GradeForm postNewGrade={this.postNewGrade}/>
         </div>
       </div>
     );
