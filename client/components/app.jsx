@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { grades: [] };
+    this.postNewGrade = this.postNewGrade.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +47,7 @@ class App extends React.Component {
         <GradeTableHeader averageGrade={this.getAverageGrade()} />
         <div className='d-flex w-100'>
           <GradeTable grades={this.state.grades} />
-          <GradeForm />
+          <GradeForm addGrade={this.postNewGrade}/>
         </div>
       </div>
     );

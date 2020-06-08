@@ -6,8 +6,33 @@ class GradeForm extends React.Component {
     this.state = {
       name: '',
       course: '',
-      grade: null
+      grade: ''
     };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({ [event.target.id]: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.postNewGrade({
+      name: this.state.name,
+      course: this.state.course,
+      grade: this.state.grade
+    });
+    this.reset();
+  }
+
+  reset() {
+    this.setState({
+      name: '',
+      course: '',
+      grade: ''
+    });
   }
 
   render() {
@@ -20,6 +45,8 @@ class GradeForm extends React.Component {
             className='flex-grow-1'
             type='text'
             placeholder='Name'
+            value={this.state.name}
+            onClick={this.handleClick}
           />
         </label>
 
@@ -30,6 +57,8 @@ class GradeForm extends React.Component {
             className='flex-grow-1'
             type='text'
             placeholder='Course'
+            value={this.state.course}
+            onClick={this.handleClick}
           />
         </label>
 
@@ -40,6 +69,8 @@ class GradeForm extends React.Component {
             className='flex-grow-1'
             type='number'
             placeholder='Grade'
+            value={this.state.grade}
+            onClick={this.handleClick}
           />
         </label>
 
@@ -48,10 +79,12 @@ class GradeForm extends React.Component {
             type='submit'
             value='Add'
             className='mr-2'
+            onClick={this.handleSubmit}
           />
           <input
             type='reset'
-            value='Clear'
+            value='Cancel'
+            onClick={this.reset}
           />
         </div>
       </div>
