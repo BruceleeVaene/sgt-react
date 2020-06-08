@@ -4,6 +4,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { grades: [] };
+    this.gradeTableHeader = this.gradeTableHeader.bind(this);
   }
 
   componentDidMount() {
@@ -11,6 +12,14 @@ class App extends React.Component {
       .then(response => response.json())
       .then(grades => this.setState({ grades }))
       .catch(error => console.error(error));
+  }
+
+  gradeTableHeader() {
+    return (
+      <header>
+        <h1>Student Grade table</h1>)
+      </header>
+    );
   }
 
   createGradeTable() {
@@ -26,18 +35,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Course</th>
-            <th>Grade</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.createGradeTable()}
-        </tbody>
-      </table>
+      <div>
+        {this.gradeTableHeader()}
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Course</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.createGradeTable()}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
