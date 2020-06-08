@@ -15,10 +15,23 @@ class App extends React.Component {
       .catch(error => console.error(error));
   }
 
+  getAverageGrade() {
+    const grades = this.state.grades.map(grade => grade.grade);
+    let gradeSum = 0;
+    for (let i = 0; i < grades.length; i++) {
+      gradeSum += grades[i];
+    }
+    if (grades.length === 0) {
+      return 0;
+    }
+    const gradeAvg = Math.floor(gradeSum / grades.length);
+    return gradeAvg;
+  }
+
   render() {
     return (
       <div className='container'>
-        <GradeTableHeader />
+        <GradeTableHeader averageGrade={this.getAverageGrade()} />
         <GradeTable grades={this.state.grades} />
       </div>
     );
