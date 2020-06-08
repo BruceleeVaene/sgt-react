@@ -17,7 +17,7 @@ class App extends React.Component {
   gradeTableHeader() {
     return (
       <header>
-        <h1>Student Grade table</h1>)
+        <h1>Student Grade Table</h1>
       </header>
     );
   }
@@ -35,10 +35,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         {this.gradeTableHeader()}
-        <table>
-          <thead>
+        <table className='table table-bordered table-striped'>
+          <thead className='thead-dark'>
             <tr>
               <th>Name</th>
               <th>Course</th>
