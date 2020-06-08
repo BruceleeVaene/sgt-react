@@ -21,6 +21,9 @@ class App extends React.Component {
     for (let i = 0; i < grades.length; i++) {
       gradeSum += grades[i];
     }
+    if (grades.length === 0) {
+      return 0;
+    }
     const gradeAvg = Math.floor(gradeSum / grades.length);
     return gradeAvg;
   }
