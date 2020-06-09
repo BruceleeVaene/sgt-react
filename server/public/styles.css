@@ -5,3 +5,9 @@
 header {
   margin-bottom: 40px;
 }
+.btn {
+  box-shadow: 2px 2px black;
+}
+.badge {
+  box-shadow: 2px 2px black;
+}

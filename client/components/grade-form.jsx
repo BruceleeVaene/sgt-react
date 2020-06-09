@@ -80,11 +80,12 @@ class GradeForm extends React.Component {
           <input
             type='submit'
             value='Add'
-            className='mr-2'
+            className='mr-2 btn btn-primary'
             onClick={this.handleSubmit}
           />
           <input
             type='reset'
+            className='btn btn-secondary'
             value='Cancel'
             onClick={this.reset}
           />
