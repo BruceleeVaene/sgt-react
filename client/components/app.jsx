@@ -32,6 +32,14 @@ class App extends React.Component {
       .catch(error => console.error(error));
   }
 
+  deleteAGrade(id) {
+    fetch(`/api/grades/${id}`, { method: 'DELETE' })
+      .then(response => response.json())
+      .then(id => {
+        this.setState({ grades: this.state.grades.filter(grade => grade.id !== id) });
+      });
+  }
+
   getAverageGrade() {
     const grades = this.state.grades.map(grade => grade.grade);
     let gradeSum = 0;
