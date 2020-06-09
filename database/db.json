@@ -17,6 +17,42 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 100
+    },
+    {
+      "name": "",
+      "course": "",
+      "grade": "",
+      "id": 33
+    },
+    {
+      "name": "Joe Exotic",
+      "course": "Loyalty",
+      "grade": "17",
+      "id": 34
+    },
+    {
+      "name": "Hanzo Hattori",
+      "course": "Ninjutsu",
+      "grade": "100",
+      "id": 35
+    },
+    {
+      "name": "Stressed Out Coder",
+      "course": "Student Grade Table",
+      "grade": 70,
+      "id": 36
+    },
+    {
+      "name": "bruce",
+      "course": "ko",
+      "grade": 80,
+      "id": 37
+    },
+    {
+      "name": "",
+      "course": "",
+      "grade": 0,
+      "id": 38
     }
   ]
 }

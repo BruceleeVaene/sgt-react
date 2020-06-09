@@ -1,0 +1,7 @@
+diff a/client/components/app.jsx b/client/components/app.jsx	(rejected hunks)
+@@ -28 +28 @@ class App extends React.Component {
+-        const grades = Array.from(this.state.grades); //cloning
++        const grades = Array.from(this.state.grades); // cloning
+@@ -45 +45 @@ class App extends React.Component {
+-    console.log(gradeAvg);
++
