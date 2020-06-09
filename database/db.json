@@ -1,36 +1,6 @@
 {
   "grades": [
     {
-      "id": 5,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "id": 12,
-      "name": "Brendan Eich",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "id": 32,
-      "name": "Douglas Crockford",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "name": "Stressed Out Coder",
-      "course": "Student Grade Table",
-      "grade": 70,
-      "id": 36
-    },
-    {
-      "name": "bruce",
-      "course": "ko",
-      "grade": 80,
-      "id": 37
-    },
-    {
       "name": "Joe Exotic",
       "course": "Loyalty",
       "grade": 17,
@@ -47,6 +17,24 @@
       "course": "Paper Salesman",
       "grade": 8,
       "id": 40
+    },
+    {
+      "name": "Jaws",
+      "course": "Biting People (Beach Edition)",
+      "grade": 100,
+      "id": 42
+    },
+    {
+      "name": "King Kong",
+      "course": "Finding Love ",
+      "grade": 29,
+      "id": 43
+    },
+    {
+      "name": "Donald Trump",
+      "course": "Cheetos-Lotion Cosmetics",
+      "grade": 100,
+      "id": 44
     }
   ]
 }

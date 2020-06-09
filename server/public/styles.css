@@ -11,3 +11,10 @@ header {
 .badge {
   box-shadow: 2px 2px black;
 }
+h1, th {
+  font-family: 'Corben';
+}
+td {
+  font-family: 'Nobile';
+  font-weight: 700;
+}
