@@ -22,7 +22,7 @@ class GradeForm extends React.Component {
     this.props.postNewGrade({
       name: this.state.name,
       course: this.state.course,
-      grade: this.state.grade
+      grade: Number(this.state.grade)
     });
   }
 
@@ -46,6 +46,7 @@ class GradeForm extends React.Component {
             placeholder='Name'
             value={this.state.name}
             onChange={this.handleChange}
+            required
           />
         </label>
 
@@ -58,6 +59,7 @@ class GradeForm extends React.Component {
             placeholder='Course'
             value={this.state.course}
             onChange={this.handleChange}
+            required
           />
         </label>
 
@@ -70,6 +72,7 @@ class GradeForm extends React.Component {
             placeholder='Grade'
             value={this.state.grade}
             onChange={this.handleChange}
+            required
           />
         </label>
 

@@ -24,7 +24,11 @@ class App extends React.Component {
       body: JSON.stringify(newGrade)
     })
       .then(response => response.json())
-      .then(data => this.setState({ grades: this.state.grades.concat(data) }))
+      .then(data => {
+        const grades = Array.from(this.state.grades); // cloning
+        grades.push(data);
+        this.setState({ grades });
+      })
       .catch(error => console.error(error));
   }
 
@@ -37,7 +41,8 @@ class App extends React.Component {
     if (grades.length === 0) {
       return 0;
     }
-    const gradeAvg = Math.floor(gradeSum / grades.length);
+    const gradeAvg = Number(Math.floor(gradeSum / grades.length));
+
     return gradeAvg;
   }
 
