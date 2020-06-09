@@ -35,6 +35,12 @@
       "course": "Cheetos-Lotion Cosmetics",
       "grade": 100,
       "id": 44
+    },
+    {
+      "name": "Mr. Kool Aid",
+      "course": "Busting Through Walls",
+      "grade": 100,
+      "id": 45
     }
   ]
 }
