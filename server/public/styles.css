@@ -1,7 +1,24 @@
 .container {
   margin: 30px;
   padding-left: 90px;
+  background-image: url('./images/green-chalkboard-background-with-chalk-stains-copy-space_94863-805.jpg');
+  background-size: contain;
 }
 header {
   margin-bottom: 40px;
+  color: white;
+}
+.btn {
+  box-shadow: 2px 2px black;
+}
+.badge {
+  box-shadow: 2px 2px black;
+}
+h1, th {
+  font-family: 'Corben';
+}
+td {
+  font-family: 'Nobile';
+  font-weight: 700;
+  color: whitesmoke;
 }
